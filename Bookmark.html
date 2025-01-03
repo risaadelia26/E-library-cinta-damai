@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f9355065a6.js" crossorigin="anonymous"></script>
+    <title>Bookmark</title>
+    <link rel="shortcut icon"href="c:\Users\Lenovo\Desktop\PW UAS\LOGO (2).jpg">
+    <style>
+        
+        .book {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            background-color: white;
+        }
+        #book-list {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color:silver;">
+                    <a class="navbar-brand" href="INDEX.html">E-library Cinta Damai</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" style="margin-right: 50px;">
+                          <a class="nav-link"  href="INDEX.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active" style="margin-right: 50px;">
+                          <a class="nav-link" href="Bookmark.html">Bookmark</a>
+                        </li>
+                        <li class="nav-item" style="margin-right: 50px;">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                          </li>
+                          <li class="nav-item" style="margin-right: 50px;">
+                            <a class="nav-link" href="LOGIN.html">Login</a>
+                          </li>
+    
+                      </ul>
+                      </form>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav style="--bs-breadcrumb-divider: '>'; background-color: #39BDB2;" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="INDEX.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Bookmark</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <form class="d-flex" >
+                <input
+                  class="form-control me-2 mt-4 shadow"type="search" input type="text" id="search" placeholder="Cari buku..." onkeyup="searchBook()" aria-label="Search" style="height: 30px; color: rgb(0, 0, 0);"/>
+                <button class="btn1 bg-dark mt-4 shadow" type="submit" style="color: white;">
+                  Search
+                </button>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+<div id="book-list">
+    <div class="book" data-title="Hujan">
+        <a href="Detail.html">
+            <img src="hujaaan.jpg" alt="hujan" style="width:150px;height:auto;">
+            <h2>Hujan</h2>
+        </a>
+    </div>
+    <div class="book" data-title="Rindu">
+        <a href="Detail.html">
+            <img src="rindu.jpg" alt="Rindu" style="width:150px;height:auto;">
+            <h2>Rindu</h2>
+        </a>
+    </div>
+    <div class="book" data-title="Pulang">
+        <a href="Detail.html">
+            <img src="pulang.jpg" alt="Pulang" style="width:150px;height:auto;">
+            <h2>Pulang</h2>
+        </a>
+    </div>
+    <div class="book" data-title="Cantik Itu Luka">
+        <a href="Detail.html">
+            <img src="cinta itu luka.jpg" alt="Cantik Itu Luka" style="width:150px;height:auto;">
+            <h2>Cantik Itu Luka</h2>
+        </a>
+    </div>
+    <div class="book" data-title="Cantik Dalam Ikhlas">
+        <a href="Detail.html">
+            <img src="athar.jpg" alt="cinta Dalam ikhlas" style="width:150px;height:auto;">
+            <h2>Cinta Dalam Ikhlas</h2>
+        </a>
+    </div>
+    <div class="book" data-title="Hello">
+        <a href="Detail.html">
+            <img src="hello.jpg" alt="hello" style="width:150px;height:auto;">
+            <h2>Hello</h2>
+        </a>
+    </div>
+    <div class="book" data-title="172 days">
+        <a href="Detail.html">
+            <img src="172_Days.jpg" alt="172days" style="width:150px;height:auto;">
+            <h2>172 days</h2>
+        </a>
+    </div>
+    <div class="book" data-title="Dhirga">
+        <a href="Detail.html">
+            <img src="dhirga.jpg" alt="dhirga" style="width:150px;height:auto;">
+            <h2>dhirga</h2>
+        </a>
+    </div>
+    <a class="btn btn-primary" href="INDEX.html" role="button">Back</a>
+    <a class="btn btn-primary" href="Detail.html" role="button">Next</a>
+
+</div>
+
+<script>
+function searchBook() {
+    const input = document.getElementById('search').value.toLowerCase();
+    const books = document.querySelectorAll('.book');
+    const bookList = document.getElementById('book-list');
+    
+    let hasResults = false;
+
+    books.forEach(book => {
+        const title = book.getAttribute('data-title').toLowerCase();
+        if (title.includes(input)) {
+            book.style.display = 'inline-block';
+            hasResults = true;
+        } else {
+            book.style.display = 'none';
+        }
+    });
+
+    bookList.style.display = hasResults ? 'block' : 'none'; 
+}
+</script>
+
+</body>
+</html>
